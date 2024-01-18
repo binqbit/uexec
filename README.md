@@ -15,8 +15,8 @@ uexec --key <api_key>
 - Open ueli settings
 - Go to shortcuts
 - Add new shortcut
-Name: set command name (for example gpt)
-Command:
+- Name: command name (for example gpt)
+- Command:
 ```shell
 aexec gpt
 aexec gpt {{query}} --key <api_key>
