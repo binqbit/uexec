@@ -3,7 +3,7 @@ import openai
 
 
 
-openai.apikey = OPENAI_CONFIG['apikey']
+openai.api_key = OPENAI_CONFIG['api_key']
 
 def translate_audio(audio_file):
     transcript = openai.Audio.translate("whisper-1", audio_file)
