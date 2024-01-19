@@ -8,7 +8,7 @@ if "%1" == "--key" (
     setlocal EnableDelayedExpansion
     set all_args=%*
     set args=!all_args:~7!
-    powershell -Command "Start-Process cmd -ArgumentList '/c %~dp0\uexec.bat !args!' -Verb RunAs"
+    powershell -Command "Start-Process cmd -ArgumentList '/c %~dp0\vexec.bat !args!' -Verb RunAs"
 ) else (
     call python .\src\main.py %*
 )

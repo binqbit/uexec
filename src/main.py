@@ -21,11 +21,11 @@ def listen_message():
 def main():
     args = os.sys.argv
     if args[1] == "--key":
-        OPENAI_CONFIG["api_key"] = args[2]
+        OPENAI_CONFIG["apikey"] = args[2]
         save_json_config("config.json", OPENAI_CONFIG)
         return
     
-    if not OPENAI_CONFIG["api_key"]:
+    if not OPENAI_CONFIG["apikey"]:
         print("No API key found. Please use --key to set your API key.")
         os.system("pause")
         return

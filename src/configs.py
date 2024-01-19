@@ -15,4 +15,4 @@ def save_json_config(path, data):
 try:
     OPENAI_CONFIG = load_json_config('config.json')
 except FileNotFoundError:
-    OPENAI_CONFIG = { "api_key": None }
+    OPENAI_CONFIG = { "apikey": None }
