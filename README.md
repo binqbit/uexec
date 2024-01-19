@@ -15,8 +15,8 @@ vexec --key <api_key>
 ```shell
 vexec <command>
 vexec {{query}} <command>
-vexec --ueli ...
-vexec --ueli --minimize ... - minimize terminal window after command execution
+vexec --admin ...
+vexec --admin --minimize ... - minimize terminal window after command execution
 ```
 
 ## How to use as custom command in ueli
@@ -26,6 +26,16 @@ vexec --ueli --minimize ... - minimize terminal window after command execution
 - Name: command name (for example gpt)
 - Command:
 ```shell
-vexec --ueli gpt
-vexec --ueli gpt {{query}} --key <api_key>
+vexec --admin gpt
+vexec --admin gpt {{query}} --key <api_key>
+```
+
+## How to use as hotkey
+- Create new bat file with your command and flag --admin
+- Create shortcut for this bat file
+- Open shortcut properties
+- Set hotkey
+- Example:
+```shell
+vexec --admin ask-gpt
 ```
