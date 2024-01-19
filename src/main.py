@@ -1,16 +1,18 @@
-
-import json
 import os
 from configs import OPENAI_CONFIG, save_json_config
 from openai_models.whisper import translate_audio
 from tools.console import print_one_line
 from tools.speech import listen_and_save
-import winsound
+import platform
 
 
-
+def is_windows():
+    return platform.system().lower() == 'windows'
+    
 def listen_message():
-    winsound.Beep(1000, 300)
+    if is_windows():
+        import winsound
+        winsound.Beep(1000, 300)
     print("listening...")
     listen_and_save(f"./data/voice.wav", True)
     audio_file = open("./data/voice.wav", "rb")
