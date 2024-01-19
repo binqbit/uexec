@@ -32,7 +32,14 @@ def main():
         os.system("pause")
         return
     
-    query = ' '.join(args[1:])
+    if args[1] == "--minimize":
+        import ctypes
+        ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 6)
+        skip = 2
+    else:
+        skip = 1
+    
+    query = ' '.join(args[skip:])
     msg = listen_message()
     
     if "{{query}}" in query:

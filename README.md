@@ -16,6 +16,7 @@ vexec --key <api_key>
 vexec <command>
 vexec {{query}} <command>
 vexec --ueli ...
+vexec --ueli --minimize ... - minimize terminal window after command execution
 ```
 
 ## How to use as custom command in ueli
