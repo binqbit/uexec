@@ -39,8 +39,15 @@ def main():
     else:
         skip = 1
     
+    if args[1] == "--write":
+        skip = 2
+        msg = input('Write query: ')
+    else:
+        msg = ""
+    
     query = ' '.join(args[skip:])
-    msg = listen_message()
+    if msg.strip() == "":
+        msg = listen_message()
     
     if "{{query}}" in query:
         cmd = query.replace("{{query}}", msg)
